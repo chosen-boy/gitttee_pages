@@ -1,0 +1,236 @@
+
+body{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.box{
+  min-height: calc(100vh - 323px);
+  border-bottom: 1px solid transparent;
+}
+.box_warp{
+  min-width: 1040px;
+  min-height: 99.9vh;
+  position: relative;
+}
+.box_warp:before, .box_warp:after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+.box_warp:before {
+  width: 394px;
+  height: 468px;
+  background-image: url("../../../public/assets/left.webp");
+  left: 0;
+
+}
+.box_warp:after {
+  width: 487px;
+  height: 412px;
+  background-image: url("../../../public/assets/right.webp");
+  right: 0;
+  bottom: 0;
+}
+.box_warp>.ui.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  padding: 0;
+  z-index: 1;
+
+  transform: translate(-50%, -50%);
+
+}
+.ui.container {
+  width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.session__footer {
+  margin-top: 50px;
+  text-align: center;
+}
+.session__footer-item a {
+  color: #8c92a4;
+}
+
+.session__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: inherit;
+
+  -webkit-box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.3);
+}
+.session__body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: -1;
+}
+.session-sidebox::before, .session-sidebox::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.session-sidebox {
+  color: #fff;
+  position: relative;
+  padding: 80px 80px 48px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#3a485a), to(#607089));
+  background: linear-gradient(0deg, #3a485a 0%, #607089 100%);
+}
+.session-sidebox__container {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.session-sidebox__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.session-sidebox__footer {
+  font-size: 14px;
+  padding-top: 40px;
+  margin-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.session-form {
+  margin: 0 auto;
+  width: 50%;
+  min-height: 564px;
+}
+#udeskBtn {
+  right: 14px;
+  bottom: 14px;
+  position: fixed;
+}
+.session-form__container {
+  height: 100%;
+  padding: 64px 70px 48px;
+  position: relative;
+  .session-form__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 24px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    .session-form__title {
+      display: inline-block;
+    }
+    h2 {
+      font-size: 1.714rem;
+    }
+    .pull-right {
+      float: right;
+    }
+  }
+  .session__flash-error {
+    margin-bottom: 16px;
+  }
+  .ui.form {
+    position: relative;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    input {
+      line-height: normal;
+      color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+    .session-login__body {
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      .session-form__fields{
+        .git-login-form-fields{
+          .ui.form .fields {
+            clear: both;
+            .ui.large.buttons .ui.button, .ui.large.button {
+              font-size: 18px;
+              line-height: 22px;
+              padding: 8px 26px;
+              font-weight: 500;
+            }
+            .ui.buttons .ui.orange.button, .ui.orange.buttons .button, .ui.orange.icon.button, .ui.orange.button {
+              color: #fff;
+              background: #fe7300;
+            }
+            .ui.orange.button {
+              -webkit-box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+              box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+            }
+            .ui.fluid.buttons, .ui.button.fluid, .ui.fluid.buttons>.button {
+              display: block;
+              width: 100%;
+            }
+            .text-center{
+              text-align: center !important;
+              .ui.form .fields .field, .ui.form .field {
+                clear: both;
+                margin: 0em 0em 1.2em;
+              }
+              a {
+                text-decoration: none;
+                cursor: pointer;
+                color: #005980;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .session-login-oauth {
+    margin-top: 44px;
+    .session-login__oschina {
+      text-align: center;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #005980;
+      }
+    }
+    .session-login-oauth__container {
+      margin-top: 24px;
+    }
+  }
+}

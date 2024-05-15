@@ -1,0 +1,76 @@
+Arguments: 
+  C:\Users\ltc\scoop\apps\nodejs18\current\node.exe D:\yarn\bin\yarn.js add Prettier
+
+PATH: 
+  D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;D:\anaconda3\bin;D:\anaconda3\condabin;D:\node\node_global\node_modules;E:\bin;D:\java\jdk11\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;D:\微信小程序开发\开发工具\微信web开发者工具1\dll;C:\Program Files;x86)\NVIDIA Corporation\PhysX\Common;E:\mysql-8.0.28-winx64\bin;C:\Program Files\Git\cmd;D:\apache-maven-3.8.4\bin;D:\Tomycat\apache-tomcat-11.0.0-M1\lib;D:\Tomycat\apache-tomcat-11.0.0-M1\bin;D:\Tomycat\apache-tomcat-11.0.0-M1\lib\servlet-api.jar;D:\yarn\bin;D:\java\jdk11\jre\bin;D:\phpstudy_pro\Extensions\php\php8.0.2nts;C:\ProgramData\ComposerSetup\bin;%NVM_HOME%;%NVM_SYMLINK%;D:\anaconda3\Scripts;D:\anaconda3\Library\bin;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;C:\Users\ltc\scoop\apps\nodejs18\current;C:\Users\ltc\scoop\apps\nodejs18\current\bin;C:\Users\ltc\scoop\apps\nodejs-lts\current\bin;C:\Users\ltc\scoop\apps\nodejs-lts\current;C:\Users\ltc\scoop\apps\nodejs16\current;C:\Users\ltc\scoop\apps\nodejs16\current\bin;C:\Users\ltc\scoop\apps\nvm\current\nodejs\nodejs;C:\Users\ltc\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin;E:\mysql\bin;C:\Users\ltc\AppData\Local\Microsoft\WindowsApps;D:\jetbrain\DataGrip 2022.2.5\bin;D:\IntelliJ IDEA Community Edition 2022.2.1\bin;D:\jetbrain\CLion 2022.2.4\bin;node_global;C:\Users\ltc\AppData\Local\JetBrains\Toolbox\scripts;C:\WINDOWS\system32;C:\Users\ltc\AppData\Local\Yarn\bin;C:\Users\ltc\AppData\Roaming\Composer\vendor\bin;D:\vscode\Microsoft VS Code\bin;C:\Users\ltc\scoop\apps\nvm\current;C:\Users\ltc\scoop\persist\nvm\nodejs\nodejs;D:\node\node_global;C:\Users\ltc\AppData\Local\GitHubDesktop\bin;D:\codedir\HarmonyOS\DevEco\DevEco Studio\bin;.;D:\codedir\MinGW\bin;D:\codedir\web\gitttee_pages\node_modules\.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.20.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmmirror.com/Prettier: Not found
+      at params.callback [as _callback] (D:\yarn\lib\cli.js:66145:18)
+      at self.callback (D:\yarn\lib\cli.js:140890:22)
+      at Request.emit (node:events:517:28)
+      at Request.<anonymous> (D:\yarn\lib\cli.js:141862:10)
+      at Request.emit (node:events:517:28)
+      at IncomingMessage.<anonymous> (D:\yarn\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:631:28)
+      at IncomingMessage.emit (node:events:529:35)
+      at endReadableNT (node:internal/streams/readable:1400:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+npm manifest: 
+  {
+    "name": "gitttee_pages",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "dev":  "webpack serve --open --config  scripts/webpack.dev.js",
+      "build": "webpack --config scripts/webpack.prod.js",
+      "server": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.24.5",
+      "@babel/preset-env": "^7.24.5",
+      "@babel/preset-react": "^7.24.1",
+      "@babel/preset-typescript": "^7.24.1",
+      "@types/react": "^18.3.2",
+      "@types/react-dom": "^18.3.0",
+      "babel-loader": "^9.1.3",
+      "cross-env": "^7.0.3",
+      "css-loader": "^7.1.1",
+      "css-minimizer-webpack-plugin": "^7.0.0",
+      "html-webpack-plugin": "^5.6.0",
+      "less-loader": "^6.2.0",
+      "mini-css-extract-plugin": "^2.9.0",
+      "postcss-loader": "^8.1.1",
+      "postcss-preset-env": "^9.5.13",
+      "style-loader": "^4.0.0",
+      "typescript": "^5.4.5",
+      "webpack": "^5.91.0",
+      "webpack-cli": "^5.1.4",
+      "webpack-dev-server": "^5.0.4",
+      "webpack-merge": "^5.10.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
