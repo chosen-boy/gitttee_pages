@@ -10,6 +10,7 @@ module.exports = {
     entry: path.resolve(__dirname, '../src/index.tsx'),
     output: {
         path: path.resolve(__dirname, '../dist'), // 打包后的代码放在dist目录下
+
         filename: '[name].[hash:8].js', // 打包的文件名
         clean: true,
     },
@@ -58,7 +59,22 @@ module.exports = {
                     esModule:false
                 },
                 type: 'javascript/auto'
-            }
+            },
+            {
+                // 命中字体包
+                test: /\.(woff|woff2|eot|ttf|otf|truetype)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192, // 小于 8KB 的文件转换为 base64 格式
+                            name: 'fonts/[name].[ext]'
+                        }
+                    }
+                ]
+            },
+
+
 
         ],
     },

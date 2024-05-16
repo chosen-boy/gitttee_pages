@@ -2,130 +2,120 @@ import * as React from "react";
 
 import './login.less'
 import '../../icon/iconfont.css'
-import {useState} from "react";
 import {Link} from "react-router-dom";
 
 
- // @ts-ignore
-function  Phone_load({stus,setStus}){
-    return (
-
-     <form className="ui custom form session__control session-login__form session-login__with-password "
-           id="new_user" action="/login" acceptCharset="UTF-8" method="post">
-         <div className="session-login__body">
-             <div className="session-form__fields">
-                 <div className="git-login-form-fields">
-                     <div className="field">
-                         <input className="session-login__phone-input" placeholder="手机号码"
-                                type="text" name="user[login]"
-                                id="user_login"/>
-                     </div>
-                     <div className="field">
-                         <div className="phone_code">
-                             <div className='get_code'><input className="session-login__captcha-input"
-                                         placeholder="手机验证码" type="text" name="user[account_captcha]"
-                                         id="user_account_captcha"/></div>
-
-                             <div className="sent_code">
-
-                                 发送验证码
-                             </div>
-
-
-
-                         </div>
-                     </div>
-                     <div className="two fields">
-                         <div className="field">
-                             <div className="ui checkbox js-checkbox">
-                                 <input
-                                     type="checkbox" value="1" name="user[remember_me]"
-
-                                     className="hidden"/>
-                                 <label>记住我</label></div>
-                         </div>
-                         <div className="field">
-                             <a className="session__toggle-button" data-control="phone"
-
-                                onClick={()=>{setStus(!stus)}} >用户名登录</a>
-                         </div>
-                     </div>
-                     <div className="field">
-                         <input type="submit" name="commit" value="登 录"
-                                className="orange"
-                         />
-                     </div>
-                     <div className="field text-center">
-                         <a className="forget-password"
-
-                            href="/password/new">已有帐号，忘记密码？</a>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </form>
-
-    )
- }
-
 // @ts-ignore
-function Use_password({stus,setStus}) {
-
+function  Phone_load(){
     return (
-        <form className="ui custom form session__control session-login__form session-login__with-password "
-              id="new_user" action="/login" acceptCharset="UTF-8" method="post">
-            <div className="session-login__body">
-                <div className="session-form__fields">
-                    <div className="git-login-form-fields">
-                        <div className="field" id="git-login">
-                            <input placeholder="手机／邮箱／个人空间地址"
-                                   className="login-password__account-input" type="text"
-                                   name="user[login]" id="user_login"/>
+
+        <>
+            <form className="ui custom form session__control session-register__form " data-control="register"
+                  id="new_user" action="/" acceptCharset="UTF-8" method="post">
+                <div className="session-login__body">
+                    <input value="register" type="hidden" name="user[from]" id="user_from"/>
+                    <input className="placeholder__autofill-text"/>
+                    <div className="session-register-form-fields">
+
+                        <div className="field error">
+                            <input className="session-register__name"  placeholder="姓名"
+                                   type="text" name="user[name]" id="user_name"/>
+                            <div className="ui small error text message">姓名为必填项</div>
+                            <i className="icon remove semantic-status" ></i></div>
+                        <div className="field" id="register-host">
+                            <div className="ui left labeled input">
+                                <div className="ui basic label background-grey">https://gitee.com/</div>
+                                <div className="ui icon input">
+                                    <input className="session-register__username"
+                                           placeholder="个人空间地址" type="text" name="user[username]"
+                                           id="user_username"/>
+                                    <i className="icon iconfont icon-help-circle text-green js-popup-default session-form__username-help"
+                                       data-position="top right"></i>
+                                    <div className="ui popup dark" style={{display:'none'}}>
+                                        <div className="ui list text-white">
+                                            <div className="item">这是您注册帐号主页的地址，可用作推拉代码或登录 Gitee
+                                                的用户名
+                                            </div>
+                                            <div className="item">个人空间地址 是用户在 Gitee 上的唯一标识，在开通 Gitee
+                                                帐号时填写
+                                            </div>
+                                            <div className="item">您可以将个人空间地址分享给朋友，让他们通过您的个人空间地址访问您的
+                                                Gitee 主页
+                                            </div>
+                                            <div
+                                                className="item">每个帐号只能对应一个个人空间地址，建议您在注册时为您的帐号精心起一个好名字
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="field">
-                            <input type="hidden" name="encrypt_data[user[password]]"/><input
-                            placeholder="请输入密码" data-encrypt="true" type="password"
-                            name="user[password]" id="user_password"/>
+                            <input className="session-register__account-input"
+                                   placeholder="请输入手机号码"
+                                   type="text" name="user[account]" id="user_account"/>
                         </div>
-                        <div className="two fields">
-                            <div className="field">
-                                <div className="ui checkbox js-checkbox">
-                                    <input
-                                        type="checkbox" value="1" name="user[remember_me]"
+                        <div className="field hide session-register__captcha-field"
+                           >
+                            <div className="ui right labeled input captcha-labeled">
+                                <input type="text" name="account_captcha" id="account_captcha" value=""
+                                       placeholder="请输入验证码"
+                                       className="session-register__captcha-input"/>
+                                <div className="ui basic orange button session-register__captcha-button"
+                                     data-sensors-click="" data-title="发送验证码"
+                                     >
+                                    发送验证码
+                                </div>
 
-                                        className="hidden"/>
-                                    <label>记住我</label></div>
-                            </div>
-                            <div className="field">
+                                <div className="ui danger popup captcha-popup">
+                                    <p >
+                                        收不到验证码？
+                                        <a href="/self_services">获取帮助</a>
+                                    </p>
+                                </div>
 
-                                <a className="session__toggle-button" data-control="phone"
-
-                                     onClick={()=>{setStus(!stus)}}>短信验证登录</a>
                             </div>
                         </div>
                         <div className="field">
-                            <input type="submit" name="commit" value="登 录"
-                                   className="orange"
-                            />
+                            <div className="ui icon input js-show-password session-form__password-input">
+                                <input  autoComplete="new-password" placeholder="密码不少于6位"
+                                       data-password-regx="^(?=.*[0-9])(?=.*[a-zA-Z!@_#$%^&amp;*()\-+=,.?]).{6,32}$"
+                                       type="password" name="user[password]" id="user_password"/>
+                                <i className="eye icon"></i>
+                            </div>
                         </div>
-                        <div className="field text-center">
-                            <a className="forget-password"
-
-                               href="/password/new">已有帐号，忘记密码？</a>
+                        <div className="field">
+                            <div className="ui checkbox js-checkbox git-checkbox-accept-term">
+                                <input type="checkbox" name="accept_term" id="accept_term" value="0"
+                                       className="hidden"/>
+                                <label>我已阅读并同意</label>
+                            </div>
+                            <span className="register case">
+<a target="_blank" href="/terms">使用条款</a>
+及
+<a target="_blank"  href="/inactive_accounts">非活跃帐号处理规范</a>
+</span>
+                        </div>
+                        <div className="field">
+                            <button name="button" type="submit" id="btn-submit"
+                                    className="ui orange fluid submit button register-btn-submit large"
+                                    >立即注册
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </>
 
     )
- }
+}
 
-export default function Login() {
 
-    const [stus ,setStus] = useState(false)
+// @ts-ignore
 
-    const form_value=stus ? <Phone_load stus={stus} setStus={setStus}></Phone_load>:<Use_password stus={stus} setStus={setStus}></Use_password>
+
+export default function Register() {
+
 
     return (
         <div className='box'>
@@ -160,7 +150,7 @@ export default function Login() {
                                 </div>
                                 <div className="session-sidebox__footer">
                                     <a target="_blank"
-                                      ><
+                                    ><
                                         strong className="session-sidebox__icon-hot">Gitee 企业版</strong>
                                         <span className="session-sidebox__divider">- </span>
                                         企业级 DevOps 研发管理平台
@@ -174,26 +164,25 @@ export default function Login() {
                             <div className="session-form__container is-login">
                                 <header className="session-form__header">
                                     <h2 className="session-form__title">
-                                        <span>登录</span>
+                                        <span>注册</span>
                                     </h2>
-                                    <span className="pull-right">没有帐号？ <Link to='/register'> <a
-                                       >点此注册</a></Link>
-                                       </span>
+                                    <span className="pull-right">已有帐号？<Link to='/'> <a
+                                    >点击登录</a></Link></span>
                                 </header>
 
-                                {form_value}
+                                {/*<Phone_load></Phone_load>*/}
                                 <div className="session-login-oauth">
                                     <div className="session-login__oschina">
-                                    <a
+                                        <a
                                             href="https://gitee.com/auth/oschina">
                                             <i
-                                            className="icon-osc iconfont osc"></i>
-                                            <span  >使用 OSChina 帐号登录</span>
+                                                className="icon-osc iconfont osc"></i>
+                                            <span>使用 OSChina 帐号登录</span>
                                         </a></div>
                                     <div className="session-login-oauth__container">
                                         <div className="qita">
 
-                                                <span className="text-muted">  其他方式登录 </span>
+                                            <span className="text-muted">  其他方式登录 </span>
 
                                         </div>
                                         <div className="icon_list">

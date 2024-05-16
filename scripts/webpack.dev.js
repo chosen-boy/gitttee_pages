@@ -9,7 +9,7 @@ module.exports = merge(base, {
         port: 8088,
 
         // 端口
-
+        historyApiFallback: true,
         // 开启压缩
         compress: true,
         // 打开默认浏览器
@@ -21,21 +21,21 @@ module.exports = merge(base, {
         rules: [
             // ...
             {
-                test: /\.less$/,
+                test: /\.(less|css)$/,
                 use: [
                     'style-loader',
                     'css-loader',
-                    //
-                    // {
-                    //     loader: 'postcss-loader',
-                    //     options: {
-                    //         postcssOptions: {
-                    //             plugins: [
-                    //                 ['postcss-preset-env', {}]
-                    //             ]
-                    //         }
-                    //     }
-                    // },
+
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: [
+                                    ['postcss-preset-env', {}]
+                                ]
+                            }
+                        }
+                    },
                     'less-loader'
                 ],
                 // 排除 node_modules 目录

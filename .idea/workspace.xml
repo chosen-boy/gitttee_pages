@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="" />
+    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="up">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/webpack.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/webpack.base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/login.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,11 +25,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="TypeScript JSX File" />
         <option value="Less File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -27,6 +39,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/css-loader/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/node_modules/mini-css-extract-plugin/package.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -45,7 +60,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript 调试.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/codedir/web/gitttee_pages",
+    "last_opened_file_path": "D:/codedir/web/gitttee_pages/src/icon",
     "list.type.of.created.stylesheet": "Less",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -59,7 +74,7 @@
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.server.executor": "Run",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "ts.external.directory.path": "D:\\codedir\\web\\gitttee_pages\\node_modules\\typescript\\lib",
     "two.files.diff.last.used.file": "D:/codedir/web/gitttee_pages/src/pages/Login/logo.svg",
     "vue.rearranger.settings.migration": "true"
@@ -67,16 +82,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codedir\web\gitttee_pages\src\icon" />
+      <recent name="D:\codedir\web\gitttee_pages\public\assets" />
       <recent name="D:\codedir\web\gitttee_pages" />
       <recent name="D:\codedir\web\gitttee_pages\src\pages\Login" />
       <recent name="D:\codedir\web\gitttee_pages\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codedir\web\gitttee_pages\src\pages\Login" />
+      <recent name="D:\codedir\web\gitttee_pages\public\assets\more" />
+      <recent name="D:\codedir\web\gitttee_pages\public\assets" />
       <recent name="D:\codedir\web\gitttee_pages\public" />
       <recent name="D:\codedir\web\gitttee_pages\src\pages" />
-      <recent name="D:\codedir\web\gitttee_pages\src\pages\Login" />
-      <recent name="D:\codedir\web\gitttee_pages\src" />
-      <recent name="D:\codedir\web\gitttee_pages" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -151,11 +168,25 @@
       <workItem from="1715759687719" duration="1047000" />
       <workItem from="1715760847676" duration="10000" />
       <workItem from="1715765088394" duration="19401000" />
-      <workItem from="1715788172486" duration="826000" />
+      <workItem from="1715788172486" duration="1038000" />
+      <workItem from="1715830317041" duration="38339000" />
     </task>
+    <task id="LOCAL-00001" summary="up">
+      <option name="closed" value="true" />
+      <created>1715789097684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715789097684</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
 </project>
