@@ -4,8 +4,8 @@ import './login.less'
 import '../../icon/iconfont.css'
 import {useState} from "react";
 import {Link} from "react-router-dom";
-
-
+import LeftValue from "@/component/LeftValue";
+import LogoList from "@/component/LogoList";
  // @ts-ignore
 function  Phone_load({stus,setStus}){
     return (
@@ -133,41 +133,7 @@ export default function Login() {
                 <div className="ui container">
                     <div className="session__body">
                         <div className="session-sidebox">
-                            <div className="session-sidebox__container">
-                                <div className="session-sidebox__header">
-                                    <div className="session-sidebox__logo">
-
-                                        <img alt="logo" src='../assets/logo.svg'/>
-                                    </div>
-
-                                    <h2 className="session-sidebox__subtitle">
-                                        企业级 DevOps 研发管理平台
-                                    </h2>
-                                </div>
-                                <div className="session-sidebox__content">
-                                    <div className="session-sidebox-content__container">
-                                        <div className="session-sidebox-comments__header">
-                                            <span className="session-sidebox-comments__title">李铭健</span> <span
-                                            className="session-sidebox-comments__position">骑鹅旅行 Head of PMO</span>
-
-                                        </div>
-                                        <div className="session-sidebox-comments__content">
-                                            Gitee 企业版不只是一个代码托管的工具，更是带着深深
-                                            Geek 文化的项目管理平台。在 Gitee 企业版上，iGola.com
-                                            的团队协作变得更加容易，整个流程管理变得更加透明流畅。
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="session-sidebox__footer">
-                                    <a target="_blank"
-                                      ><
-                                        strong className="session-sidebox__icon-hot">Gitee 企业版</strong>
-                                        <span className="session-sidebox__divider">- </span>
-                                        企业级 DevOps 研发管理平台
-                                        <i className="iconfont icon-circle-right arrow "></i>
-                                    </a>
-                                </div>
-                            </div>
+                           <LeftValue></LeftValue>
 
                         </div>
                         <div className="session-form">
@@ -182,113 +148,7 @@ export default function Login() {
                                 </header>
 
                                 {form_value}
-                                <div className="session-login-oauth">
-                                    <div className="session-login__oschina">
-                                    <a
-                                            href="https://gitee.com/auth/oschina">
-                                            <i
-                                            className="icon-osc iconfont osc"></i>
-                                            <span  >使用 OSChina 帐号登录</span>
-                                        </a></div>
-                                    <div className="session-login-oauth__container">
-                                        <div className="qita">
-
-                                                <span className="text-muted">  其他方式登录 </span>
-
-                                        </div>
-                                        <div className="icon_list">
-                                            <div className="item">
-                                                <a
-                                                    href="https://gitee.com/auth/aliyun">
-                                                    <div className="git-other-login-icon">
-                                                        <i className="aliyun icon-aliyun iconfont"
-                                                           title="使用阿里云帐号登录"></i>
-                                                    </div>
-                                                </a></div>
-                                            <div className="item">
-                                                <a
-                                                    href="https://gitee.com/auth/gitlab">
-                                                    <div className="git-other-login-icon">
-                                                        <i className="gitlab icon-gitlab iconfont"
-                                                           title="使用 GitLab 帐号登录"></i>
-                                                    </div>
-                                                </a></div>
-                                            <div className="item">
-                                                <a
-                                                    href="https://gitee.com/auth/huawei">
-                                                    <div className="git-other-login-icon">
-                                                        <i className="huawei icon-huawei iconfont"
-                                                           title="使用华为帐号登录"></i>
-                                                    </div>
-                                                </a></div>
-                                            <div className="item">
-                                                <a
-                                                    href="https://gitee.com/auth/github">
-                                                    <div className="git-other-login-icon">
-                                                        <i className="github icon-github iconfont"
-                                                           title="使用 GitHub 帐号登录"></i>
-                                                    </div>
-                                                </a></div>
-                                            <div className="item">
-<span className="session-oauth__other-icon js-popup-default" data-popup-hoverable="true" data-position="left center">
-<i className="iconfont icon-gengduo "></i>
-</span>
-                                                <div className="ui flowing popup session-oauth__other">
-                                                    <div className="session-oauth__other-list">
-                                                        <a className="item"
-
-                                                           href="https://gitee.com/auth/weibo">
-                                                            <div className="git-other-login-icon">
-                                                                <i className="icon-logo-weibo iconfont weibo"
-                                                                   title="使用 Weibo 帐号登录"></i>
-                                                            </div>
-                                                        </a><a className="item"
-
-
-                                                               href="https://gitee.com/auth/qq_connect">
-                                                        <div className="git-other-login-icon">
-                                                            <i className="icon-logo-qq iconfont qq"
-                                                               title="使用 QQ 帐号登录"></i>
-                                                        </div>
-                                                    </a><a className="item"
-
-
-                                                           href="https://gitee.com/auth/windowslive">
-                                                        <div className="git-other-login-icon">
-                                                            <i className="icon-logo-windows iconfont windows"
-                                                               title="使用 WindowsLive 帐号登录"></i>
-                                                        </div>
-                                                    </a><a className="item"
-
-
-                                                           href="https://gitee.com/auth/wechat">
-                                                        <div className="git-other-login-icon">
-                                                            <i className="icon-logo_wechat iconfont wechat"
-                                                               title="使用微信帐号登录"></i>
-                                                        </div>
-                                                    </a><a className="item"
-
-
-                                                           href="https://gitee.com/auth/dingding">
-                                                        <div className="git-other-login-icon">
-                                                            <i className="dingding icon-logo-dingding iconfont"
-                                                               title="使用钉钉帐号登录"></i>
-                                                        </div>
-                                                    </a><a className="item"
-
-
-                                                           href="https://gitee.com/auth/trustie">
-                                                        <div className="git-other-login-icon">
-                                                            <i className="icon-logo_trustie iconfont trustie"
-                                                               title="使用 Trustie 帐号登录"></i>
-                                                        </div>
-                                                    </a></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+                               <LogoList></LogoList>
 
 
                             </div>

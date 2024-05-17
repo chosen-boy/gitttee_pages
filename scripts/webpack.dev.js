@@ -22,10 +22,15 @@ module.exports = merge(base, {
             // ...
             {
                 test: /\.(less|css)$/,
+
+                exclude: [
+                    /\.module\.less$/,
+                    /node_modules/
+                ],
+
                 use: [
                     'style-loader',
                     'css-loader',
-
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -39,10 +44,22 @@ module.exports = merge(base, {
                     'less-loader'
                 ],
                 // 排除 node_modules 目录
-                exclude: /node_modules/
+
             },
+            {
+                test: /\.module\.less$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name]__[local]--[hash:base64:5]',
 
-
+                        },
+                    },
+                ],
+            },
         ]
     }
 

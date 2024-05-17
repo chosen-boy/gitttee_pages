@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from "@/pages/Login/Login";
-import Register from "@/pages/Login/register";
+import Register from "@/pages/Register/register";
 
 
 const root = ReactDOM.createRoot(document.getElementById('app')!)
