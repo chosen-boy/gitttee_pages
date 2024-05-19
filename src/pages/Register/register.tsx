@@ -101,7 +101,10 @@ import  './register.less'
 function RegisterForm() {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+
     const [showCaptcha, setShowCaptcha] = useState(false);
+    const [Password, setPassword] = useState('');
+    const x = <i className="iconfont icon-x x"></i>
 
 
     const handleNameChange = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
@@ -109,7 +112,11 @@ function RegisterForm() {
         // 自动填充个人空间地址
         // 比对显示已有名称的字号
     }, []);
-
+    const handpassoord = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
+        setPassword(e.target.value);
+        // 自动填充个人空间地址
+        // 比对显示已有名称的字号
+    }, []);
     const handlePhoneNumberChange = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
         setPhoneNumber(e.target.value);
         // 手机号格式校验
@@ -129,7 +136,7 @@ function RegisterForm() {
 
     const session = showCaptcha && (
         <div className="field session-register__captcha-field">
-            <input type="text" name="captcha" id="captcha" required placeholder="请输入验证码" />
+            <input type="text" name="captcha" id="captcha" required placeholder="请输入验证码"/>
             <button>发送验证码</button>
         </div>
     );
@@ -137,29 +144,34 @@ function RegisterForm() {
     return (
         <form className='form'>
             <div className="field">
-                <input className="session-register__name" required placeholder="姓名"
-                       type="text" value={name}   onChange={handleNameChange}/>
+                <input className={`session-register__name ${!name ? 'errorstyle': ''}`} required placeholder="姓名"
+                       type="text" value={name} onChange={handleNameChange}/>
                 {!name && <span className="error">姓名是必填项</span>}
+                {!name&& x}
             </div>
             <div className="field dizhi">
                 <div className=" basic ">https://gitee.com/</div>
                 <div className="namespace">
                     <input className="session-register__username" required placeholder="个人空间地址"
-                           type="text" name="personalSpace" id="personalSpace"  value={name} />
+                           type="text" name="personalSpace" id="personalSpace" value={name}/>
                 </div>
             </div>
             <div className="field">
-                <input className="session-register__account-input" required placeholder="请输入手机号码"
+                <input className={`session-register__account-input ${!name ? 'phoneNumber': ''}`} required placeholder="请输入手机号码"
                        type="text" name="phoneNumber" id="phoneNumber" value={phoneNumber}
                        onChange={handlePhoneNumberChange}/>
-                {!showCaptcha && phoneNumber &&<span className="error">手机号格式错误</span>}
+                {!showCaptcha && phoneNumber && <span className="error">手机号格式错误</span>}
                 {!phoneNumber && <span className="error">手机号为必填项</span>}
+                {!phoneNumber&& x}
             </div>
             {session}
             <div className="field error">
                 <div className="psssword">
-                    <input required placeholder="密码不少于6位" type="password" name="password" id="password"/>
+                    <input required placeholder="密码不少于6位" type="password" className={`${!name ? 'Password': ''}`} name="password" id="password"
+                           value={Password} onChange={handpassoord} />
                 </div>
+                {!Password && <span className="error">密码是必填项</span>}
+                {!Password&& x}
             </div>
             <div className="field seceltSize">
                 <input className="ui checkbox" type="checkbox" name="acceptTerm" id="acceptTerm"/>

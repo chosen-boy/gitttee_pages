@@ -8,7 +8,7 @@ function  LogoList(){
                 <a
                     href="https://gitee.com/auth/oschina">
                     <i
-                        className="icon-osc iconfont osc"></i>
+                        className="icon-osc iconfont osc" style={{color:'green'}}></i>
                     <span>使用 OSChina 帐号登录</span>
                 </a></div>
             <div className="session-login-oauth__container">
@@ -23,14 +23,14 @@ function  LogoList(){
                             href="https://gitee.com/auth/aliyun">
                             <div className="git-other-login-icon">
                                 <i className="aliyun icon-aliyun iconfont"
-                                   title="使用阿里云帐号登录"></i>
+                                   style={{color:'black'}} title="使用阿里云帐号登录"></i>
                             </div>
                         </a></div>
                     <div className="item">
                         <a
                             href="https://gitee.com/auth/gitlab">
                             <div className="git-other-login-icon">
-                                <i className="gitlab icon-gitlab iconfont"
+                                <i className=" icon-gitlab iconfont" style={{color:'#fd7a26'}}
                                    title="使用 GitLab 帐号登录"></i>
                             </div>
                         </a></div>
@@ -38,15 +38,15 @@ function  LogoList(){
                         <a
                             href="https://gitee.com/auth/huawei">
                             <div className="git-other-login-icon">
-                                <i className="huawei icon-huawei iconfont"
-                                   title="使用华为帐号登录"></i>
+                                <i className="iconfont icon-huawei"
+                                   title="使用华为帐号登录" ></i>
                             </div>
                         </a></div>
                     <div className="item">
                         <a
                             href="https://gitee.com/auth/github">
                             <div className="git-other-login-icon">
-                                <i className="github icon-github iconfont"
+                                <i className=" icon-github iconfont"
                                    title="使用 GitHub 帐号登录"></i>
                             </div>
                         </a></div>

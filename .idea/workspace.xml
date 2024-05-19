@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="登录界面" />
+    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="登录界面">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/LogoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/LogoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icon/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon/iconfont.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register/register.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/register.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/register.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +55,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JavaScript 调试.index.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/codedir/web/taro/taro_store&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codedir/web/DAPP-Digital-Signature&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;Less&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
@@ -84,7 +91,7 @@
       <recent name="D:\codedir\web\gitttee_pages\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/gitttee_pages/dist/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -158,7 +165,11 @@
       <workItem from="1715765088394" duration="19401000" />
       <workItem from="1715788172486" duration="1038000" />
       <workItem from="1715830317041" duration="39014000" />
-      <workItem from="1715926033491" duration="23995000" />
+      <workItem from="1715926033491" duration="24389000" />
+      <workItem from="1716018457877" duration="2536000" />
+      <workItem from="1716107257916" duration="658000" />
+      <workItem from="1716118820633" duration="31000" />
+      <workItem from="1716126859362" duration="6583000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <option name="closed" value="true" />

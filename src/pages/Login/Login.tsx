@@ -2,12 +2,40 @@ import * as React from "react";
 
 import './login.less'
 import '../../icon/iconfont.css'
-import {useState} from "react";
+import {useCallback, useState} from "react";
 import {Link} from "react-router-dom";
 import LeftValue from "@/component/LeftValue";
 import LogoList from "@/component/LogoList";
+
  // @ts-ignore
 function  Phone_load({stus,setStus}){
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [yanzma, setyanzma] = useState('');
+
+    const [showCaptcha, setShowCaptcha] = useState(false);
+    const x = <i className="iconfont icon-x x"></i>
+
+    const handyanzma = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
+
+        setyanzma(e.target.value);
+
+    }, []);
+
+    const handlePhoneNumberChange = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
+        setPhoneNumber(e.target.value);
+        // 手机号格式校验
+        // 显示验证码输入框
+        if (e.target.value && isValidPhoneNumber(e.target.value)) {
+            setShowCaptcha(true);
+        } else {
+            setShowCaptcha(false);
+        }
+    }, []);
+    // @ts-ignore
+    const isValidPhoneNumber = useCallback((phoneNumber) => {
+        // 手机号格式校验逻辑
+        return /^\d{11}$/.test(phoneNumber);
+    }, []);
     return (
 
      <form className="ui custom form session__control session-login__form session-login__with-password "
@@ -16,15 +44,21 @@ function  Phone_load({stus,setStus}){
              <div className="session-form__fields">
                  <div className="git-login-form-fields">
                      <div className="field">
-                         <input className="session-login__phone-input" placeholder="手机号码"
+                         <input className={`session-login__phone-input ${!phoneNumber ? 'errorstyle': ''}`} placeholder="手机号码"
                                 type="text" name="user[login]"
-                                id="user_login"/>
+                                id="user_login"  value={phoneNumber} onChange={handlePhoneNumberChange}/>
+                         {!showCaptcha && phoneNumber &&<span className="error">手机号格式错误</span>}
+                         {!phoneNumber && <span className="error">手机号为必填项</span>}
+                         {!phoneNumber && x}
                      </div>
                      <div className="field">
                          <div className="phone_code">
-                             <div className='get_code'><input className="session-login__captcha-input"
+                             <div className='get_code'>
+                                 <input className={`session-login__captcha-input ${!yanzma ? 'errorstyle': ''}`}
                                          placeholder="手机验证码" type="text" name="user[account_captcha]"
-                                         id="user_account_captcha"/></div>
+                                         id="user_account_captcha" value={yanzma} onChange={handyanzma}/>
+
+                             </div>
 
                              <div className="sent_code">
 
@@ -34,6 +68,8 @@ function  Phone_load({stus,setStus}){
 
 
                          </div>
+                         {!yanzma && <span className="error">验证码为必填项</span>}
+                         {!yanzma && x}
                      </div>
                      <div className="two fields">
                          <div className="field">
@@ -51,7 +87,7 @@ function  Phone_load({stus,setStus}){
                          </div>
                      </div>
                      <div className="field">
-                         <input type="submit" name="commit" value="登 录"
+                         <input type="submit"  value="登 录"
                                 className="orange"
                          />
                      </div>
@@ -70,6 +106,25 @@ function  Phone_load({stus,setStus}){
 
 // @ts-ignore
 function Use_password({stus,setStus}) {
+    const [name, setName] = useState('');
+    const [Password1, setPassword] = useState('');
+    const handleNameChange = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
+        setName(e.target.value);
+        // 自动填充个人空间地址
+        // 比对显示已有名称的字号
+    }, []);
+    const x = <i className="iconfont icon-x x"></i>
+    const handpassoord1 = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => {
+        setPassword(e.target.value);
+        // 自动填充个人空间地址
+        // 比对显示已有名称的字号
+    }, []);
+
+    // @ts-ignore
+    const isValidPhoneNumber = useCallback((phoneNumber) => {
+        // 手机号格式校验逻辑
+        return /^\d{11}$/.test(phoneNumber);
+    }, []);
 
     return (
         <form className="ui custom form session__control session-login__form session-login__with-password "
@@ -79,13 +134,19 @@ function Use_password({stus,setStus}) {
                     <div className="git-login-form-fields">
                         <div className="field" id="git-login">
                             <input placeholder="手机／邮箱／个人空间地址"
-                                   className="login-password__account-input" type="text"
-                                   name="user[login]" id="user_login"/>
+                                   className={`login-password__account-input ${!name ? 'errorstyle': ''}`} type="text"
+                                   name="user[login]" id="user_login" value={name} onChange={handleNameChange}/>
+                            {!name && <span className="error">用户名为必填项</span>}
+                            {!name && x}
                         </div>
                         <div className="field">
-                            <input type="hidden" name="encrypt_data[user[password]]"/><input
+                            <input type="hidden" name="encrypt_data[user[password]]"/>
+                            <input
+                                className={`${!Password1 ? 'errorstyle': ''}`}
                             placeholder="请输入密码" data-encrypt="true" type="password"
-                            name="user[password]" id="user_password"/>
+                            name="user[password]" id="user_password" value={Password1}  onChange={handpassoord1}/>
+                            {!Password1 && <span className="error">密码为必填项</span>}
+                            {!Password1 && x}
                         </div>
                         <div className="two fields">
                             <div className="field">
@@ -104,7 +165,7 @@ function Use_password({stus,setStus}) {
                             </div>
                         </div>
                         <div className="field">
-                            <input type="submit" name="commit" value="登 录"
+                            <input type="submit"  value="登 录"
                                    className="orange"
                             />
                         </div>

@@ -1,21 +1,67 @@
-/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/*!* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 *!*/
+/*@font-face {*/
+/*  font-family: 'iconfont';  !* Project id 4550031 *!*/
+/*  src: url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.woff2?t=1715861210805') format('woff2'),*/
+/*  url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.woff?t=1715861210805') format('woff'),*/
+/*  url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.ttf?t=1715861210805') format('truetype');*/
+/*}*/
+/*.iconfont {*/
+/*  font-family: "iconfont" !important; !* 使用 Arial 作为备选字体 *!*/
+/*  font-size: 40px;*/
+/*  font-style: normal;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+/*icon-circle-right{font-size: 25px}*/
+/*.icon-circle-right:before{*/
+/*  content: "\e614";*/
+/*}*/
+/*.icon-osc:before {*/
+/*  content: "\e600";*/
+/*}*/
+
+/*.icon-gengduo:before {*/
+/*  content: "\e63c";*/
+/*}*/
+
+/*.icon-huawei:before {*/
+/*  content: "\e60a";*/
+/*}*/
+/*.icon-github:before {*/
+/*  content: "\e64c";*/
+/*}*/
+
+/*.icon-gitlab:before {*/
+/*  content: "\e60e";*/
+/*}*/
+
+/*.icon-aliyun:before {*/
+/*  content: "\e616";*/
+/*}*/
+
+
 @font-face {
   font-family: 'iconfont';  /* Project id 4550031 */
-  src: url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.woff2?t=1715861210805') format('woff2'),
-  url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.woff?t=1715861210805') format('woff'),
-  url('//at.alicdn.com/t/c/font_4550031_zaztxvmq62.ttf?t=1715861210805') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4550031_agd4hletgnt.woff2?t=1716130266081') format('woff2'),
+  url('//at.alicdn.com/t/c/font_4550031_agd4hletgnt.woff?t=1716130266081') format('woff'),
+  url('//at.alicdn.com/t/c/font_4550031_agd4hletgnt.ttf?t=1716130266081') format('truetype');
 }
 .iconfont {
-  font-family: "iconfont" !important; /* 使用 Arial 作为备选字体 */
+  font-family: "iconfont" !important;
   font-size: 40px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-icon-circle-right{font-size: 25px}
-.icon-circle-right:before{
+
+.icon-x:before {
+  content: "\e85c";
+}
+
+.icon-circle-right:before {
   content: "\e614";
 }
+
 .icon-osc:before {
   content: "\e600";
 }
@@ -27,9 +73,6 @@ icon-circle-right{font-size: 25px}
 .icon-huawei:before {
   content: "\e60a";
 }
-.icon-github:before {
-  content: "\e64c";
-}
 
 .icon-gitlab:before {
   content: "\e60e";
@@ -37,5 +80,9 @@ icon-circle-right{font-size: 25px}
 
 .icon-aliyun:before {
   content: "\e616";
+}
+
+.icon-github:before {
+  content: "\e64c";
 }
 
