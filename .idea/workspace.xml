@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="登录界面">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/LogoList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/LogoList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icon/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/icon/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register/register.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/register.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Register/register.tsx" afterDir="false" />
+    <list default="true" id="2345b3fc-1937-4314-b7b5-fc4f0f1bec88" name="更改" comment="验证细节优化">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +164,7 @@
       <workItem from="1716018457877" duration="2536000" />
       <workItem from="1716107257916" duration="658000" />
       <workItem from="1716118820633" duration="31000" />
-      <workItem from="1716126859362" duration="6583000" />
+      <workItem from="1716126859362" duration="6946000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <option name="closed" value="true" />
@@ -187,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715876107051</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="验证细节优化">
+      <option name="closed" value="true" />
+      <created>1716133687246</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716133687246</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +199,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="up" />
     <MESSAGE value="登录界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录界面" />
+    <MESSAGE value="验证细节优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="验证细节优化" />
   </component>
 </project>

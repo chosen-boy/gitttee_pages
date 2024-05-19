@@ -1,4 +1,4 @@
-# 使用的是webpack5 构建的 
+# 使用的是webpack5构建的react项目，内容为gittee登录与注册页面的仿制
 
 
 
